@@ -2,7 +2,7 @@
 
 End-to-end implementation of a two-layer neural network built entirely from scratch using NumPy for binary classification on the Breast Cancer Wisconsin dataset.
 
-No high-level ML libraries were used for model training — only NumPy and manual implementation of neural network mathematics.
+All neural network operations (forward pass, backpropagation, gradient descent) were manually derived and implemented using NumPy.
 
 📌 Project Objective
 
@@ -67,6 +67,27 @@ Breast Cancer Wisconsin (Diagnostic) dataset
 - Sensitivity of convergence to learning rate
 - Role of non-linearity (tanh) in improving classification
 - How backpropagation propagates gradients layer-by-layer
+
+  🚀 How to Run
+
+1. Clone the repository
+2. Create virtual environment
+3. Install dependencies: pip install -r requirements.txt
+4. Run: python main.py
+
+🧮 Mathematical Formulation
+Forward Propagation:
+Z1 = W1X + b1  
+A1 = tanh(Z1)  
+Z2 = W2A1 + b2  
+A2 = sigmoid(Z2)
+Loss:
+L = -1/m Σ [y log(A2) + (1 - y) log(1 - A2)]
+Backward Propagation:
+dZ2 = A2 - Y  
+dW2 = 1/m dZ2 A1ᵀ  
+dZ1 = (W2ᵀ dZ2) ⊙ (1 - A1²)
+
 
   🔭 Next Steps
 
