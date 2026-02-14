@@ -1,54 +1,41 @@
 🧠 Breast Cancer Classification from Scratch
 
 End-to-end implementation of a two-layer neural network built entirely from scratch using NumPy for binary classification on the Breast Cancer Wisconsin dataset.
-
 All neural network operations (forward pass, backpropagation, gradient descent) were manually derived and implemented using NumPy.
 
 📌 Project Objective
 
 The purpose of this project was to deeply understand:
-
 Forward propagation
-
 Backpropagation
-
 Gradient descent
-
 Binary cross-entropy loss
-
 Parameter initialization
-
 Model evaluation
-
 Rather than using frameworks like TensorFlow or PyTorch, the model logic is implemented manually.
 
 🏗 Model Architecture
+
 Input Layer (30 features)
         ↓
 Hidden Layer (8 neurons, tanh activation)
         ↓
 Output Layer (1 neuron, sigmoid activation)
 
-
-Loss Function:
-
-Binary Cross Entropy
-
-Optimization:
-
-Gradient Descent
+Loss Function: Binary Cross Entropy
+Optimization: Gradient Descent
 
 📊 Results
 
 After training for 8000 iterations:
-
 Training Accuracy: ~98.9%
-
 Test Accuracy: ~98.2%
-
 The cost decreases smoothly during training, confirming stable gradient descent behavior.
+Convergence achieved within ~2000 iterations, with stable cost decay.
+
 
 📁 Project Structure
+
 data.py       → Dataset loading & preprocessing
 nn_core.py    → Neural network logic (forward + backward propagation)
 train.py      → Training loop
